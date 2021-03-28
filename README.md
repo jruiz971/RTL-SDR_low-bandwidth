@@ -8,9 +8,7 @@ GNU General Public License v3.0
 ## Author: 
 - Juan Luis Ruiz Vanegas : juanluisruiz971@comunidad.unam.mx
 ## Requirements
-- pyrtlsdr
-- 'pip install pyrtlsdr'
+- pyrtlsdr: ´pip install pyrtlsdr´
 > https://github.com/roger-/pyrtlsdr
-- Gqrx SDR
-- 'sudo apt-get install gqrx-sd'
+- Gqrx SDR: ´sudo apt-get install gqrx-sd´
 > https://gqrx.dk/
