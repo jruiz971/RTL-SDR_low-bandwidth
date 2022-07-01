@@ -26,7 +26,7 @@ def read_print_samples(center_freq: float):
     sdr.freq_correction = 60   # PPM
     """
 
-    sdr.center_freq = center_freq * 10**6   # Hz
+    sdr.center_freq = center_freq   # Hz
 
     # sdr.sample_rate =  230000#center_freq * 2 #(230KHz min samples by sec) Muestras por segundo
     sdr.sample_rate = 2.048e6  # Hz
@@ -71,6 +71,6 @@ if __name__ == "__main__":
 """
 To Run the code:
     python3 generate_iq_data.py <Radio station in Hertz>
-    python3 generate_iq_data.py 102.5
+    python3 generate_iq_data.py 102500000
         96.7MHz
 """
