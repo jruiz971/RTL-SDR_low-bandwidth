@@ -20,22 +20,14 @@ def read_print_samples(center_freq: float):
     """
     sdr = RtlSdr()
 
-    """
-    sdr.sample_rate = 2.048e6  # Hz
-    sdr.center_freq = 70e6     # Hz
-    sdr.freq_correction = 60   # PPM
-    """
-
+    #--- Default values ---#
     sdr.center_freq = center_freq   # Hz
-
     # sdr.sample_rate =  230000#center_freq * 2 #(230KHz min samples by sec) Muestras por segundo
-    sdr.sample_rate = 2.048e6  # Hz
+    sdr.sample_rate = 1.024e6  # (Msps)
+    sdr.freq_correction = 'auto'  # PPM
+    sdr.gain = 'auto'
 
-    sdr.freq_correction = 1  # PPM
-    #sdr.gain = 'auto'
-    sdr.gain = 1
-
-    number_samples = 524288  # number  of  samples  or  bytes  to  read
+    number_samples = (256*1024)   # number  of  samples  or  bytes  to  read
     samples = sdr.read_samples(number_samples)
 
     #--- Now save to an IQ file ----#
